@@ -10,6 +10,7 @@ let dispaly = "none";
 
 let actionVisible = document.querySelector(".collapsible__action--visible");
 let actionHidden = document.querySelector(".collapsible__action--hidden");
+let collapsibleContent = document.querySelector(".collapsible__content");
 
 actionHidden.style.display = "none";
   
@@ -19,24 +20,24 @@ document.querySelector(".collapsible__button").onclick  = function() {
         actionVisible.style.display = "none";
         actionHidden.style.display = "block";
 
-        document.querySelector(".collapsible__content").animate( style, 
+        collapsibleContent.animate( style, 
             {
                 duration: 600,
             }
         );  
 
         setTimeout(() => {  
-            document.querySelector(".collapsible__content").style.display = dispaly;       
+            collapsibleContent.style.display = dispaly;       
             style = showBlock;
             dispaly = "block";
         }, 560);
     }
     else {
-        document.querySelector(".collapsible__content").style.display = dispaly; 
+        collapsibleContent.style.display = dispaly; 
         actionVisible.style.display = "block";
         actionHidden.style.display = "none";
 
-        document.querySelector(".collapsible__content").animate( style, 
+        collapsibleContent.animate( style, 
             {
                 duration: 600,
             }
